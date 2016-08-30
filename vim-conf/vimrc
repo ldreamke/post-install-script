@@ -687,7 +687,7 @@ source $VIMRUNTIME/menu.vim
 :imap <C-j> ()<Esc>i
 :imap <C-u> []<Esc>i
 ":imap <C-n> <><Esc>i
-:imap <C-n> $()<Esc>i
+:imap <C-n> ${}<Esc>i
 :imap <C-k> <Esc>A{}<Esc>i<CR><CR><Esc>ki     
 :imap <C-l> <Esc>la
 :imap <C-h> <Esc>i
