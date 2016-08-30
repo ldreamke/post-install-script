@@ -668,19 +668,30 @@ source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
 
 """""""""""""""" by Mengke begin"""""""""""""""""""""""""""""""""""
+
+
+""" for c program """
 ":map <C-C> <Esc>ggI#include <iostream><CR>using namespace std;<CR>int main()<CR>{<CR><CR><CR>getchar();<CR>return 0;<CR>}<Esc>kkkkI    
-:map <C-P> <Esc>I    system("pause");<Esc>
-:imap <C-J> <Esc>Ifor(int i=0;i<;i++){<CR><CR>}<Esc>kk14li
+":map <C-P> <Esc>I    system("pause");<Esc>
+":imap <C-J> <Esc>Ifor(int i=0;i<;i++){<CR><CR>}<Esc>kk14li
 ":imap <C-H> <Esc>Ifor(int j=0;j<;j++){<CR><CR>}<Esc>kk14li
 "set tags+=C:\tagsStored\cpp_src\tagsStl
-set tags+=C:\cpp_tags\cpp_tags
+"set tags+=C:\cpp_tags\cpp_tags
+":map <C-M> <Esc>ggI#include <iostream><CR>#include <fstream><CR>#include <string><CR>#include <algorithm><CR>#include <sstream><CR>using namespace std;<CR>int main()<CR>{<CR>ifstream infile("test.txt")<CR>int line_len;<CR>infile>>line_len;<CR>for(int line_index=0;line_index<line_len;line_index++)<CR>{<CR><CR><CR>}<CR>system("pause");<CR>return 0;<CR>}<Esc>kkkkkI       
+":map <C-M> <Esc>ggI#include <iostream><CR>#include <ctime><CR>#include <fstream><CR>#include <sstream><CR>#include <vector><CR>#include <stack><CR>#include <queue><CR>#include <algorithm><CR>#include <string><CR>using namespace std;<CR><CR>int main(){<CR>ifstream inFile("testInput.txt");<CR>string strInput;<CR>while(getline(inFile,strInput)){<CR>stringstream strStream(strInput);<CR>clock_t bg_clk,end_clk;<CR>bg_clk=clock();<CR>end_clk=clock();<CR>cout<<"the time of function is "<<((double)(end_clk-bg_clk))/CLOCKS_PER_SEC*1000<<"ms"<<endl;<CR>}<CR>getchar();<CR>return 0;<CR>}<Esc>kkkkkkko
+":map <C-M> <Esc>ggI#include <iostream><CR>#include <ctime><CR>#include <fstream><CR>#include <sstream><CR>#include <vector><CR>#include <stack><CR>#include <queue><CR>#include <algorithm><CR>#include <string><CR>using namespace std;<CR><CR>int main(){<CR>ifstream inFile("testInput.txt");<CR>string strInput;<CR>while(getline(inFile,strInput)){<CR>stringstream strStream(strInput);<CR><CR>}<CR>getchar();<CR>return 0;<CR>}<Esc>kkkkko
+
+
+
 
 :imap <C-j> ()<Esc>i
 :imap <C-u> []<Esc>i
-:imap <C-n> <><Esc>i
+":imap <C-n> <><Esc>i
+:imap <C-n> $()<Esc>i
 :imap <C-k> <Esc>A{}<Esc>i<CR><CR><Esc>ki     
 :imap <C-l> <Esc>la
 :imap <C-h> <Esc>i
+
 ""map <S-a> :%!xxd<CR>
 "map <S-s> :%!xxd -r<CR>
 "map <S-d> :%!xxd -p<CR>
@@ -698,13 +709,9 @@ map <c-d> <Esc>ggvGx<Esc>:w!&&<Esc>:!cd ../script/ && ./ovs-close.sh&&dmesg -C &
 
 :imap <C-z> <Esc>O/*********************mengke***********************/<Esc>
 map <C-z> <Esc>O/*********************mengke***********************/<Esc>
-map <c-a> <Esc>ggvG$
+map <c-s-a> <Esc>ggvG$
 "map <c-1> <Esc>ggvG$x<Esc>:w!<CR>
 
-
-":map <C-M> <Esc>ggI#include <iostream><CR>#include <fstream><CR>#include <string><CR>#include <algorithm><CR>#include <sstream><CR>using namespace std;<CR>int main()<CR>{<CR>ifstream infile("test.txt")<CR>int line_len;<CR>infile>>line_len;<CR>for(int line_index=0;line_index<line_len;line_index++)<CR>{<CR><CR><CR>}<CR>system("pause");<CR>return 0;<CR>}<Esc>kkkkkI       
-":map <C-M> <Esc>ggI#include <iostream><CR>#include <ctime><CR>#include <fstream><CR>#include <sstream><CR>#include <vector><CR>#include <stack><CR>#include <queue><CR>#include <algorithm><CR>#include <string><CR>using namespace std;<CR><CR>int main(){<CR>ifstream inFile("testInput.txt");<CR>string strInput;<CR>while(getline(inFile,strInput)){<CR>stringstream strStream(strInput);<CR>clock_t bg_clk,end_clk;<CR>bg_clk=clock();<CR>end_clk=clock();<CR>cout<<"the time of function is "<<((double)(end_clk-bg_clk))/CLOCKS_PER_SEC*1000<<"ms"<<endl;<CR>}<CR>getchar();<CR>return 0;<CR>}<Esc>kkkkkkko
-:map <C-M> <Esc>ggI#include <iostream><CR>#include <ctime><CR>#include <fstream><CR>#include <sstream><CR>#include <vector><CR>#include <stack><CR>#include <queue><CR>#include <algorithm><CR>#include <string><CR>using namespace std;<CR><CR>int main(){<CR>ifstream inFile("testInput.txt");<CR>string strInput;<CR>while(getline(inFile,strInput)){<CR>stringstream strStream(strInput);<CR><CR>}<CR>getchar();<CR>return 0;<CR>}<Esc>kkkkko
 
 """""""""""""""""""""by mengke end"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -728,5 +735,5 @@ set autochdir
 
 set pastetoggle=<F11>
 
-
+"set paste
 
