@@ -710,7 +710,7 @@ map <c-d> <Esc>ggvGx<Esc>:w!&&<Esc>:!cd ../script/ && ./ovs-close.sh&&dmesg -C &
 
 :imap <C-z> <Esc>O/*********************mengke***********************/<Esc>
 map <C-z> <Esc>O/*********************mengke***********************/<Esc>
-map <c-s-a> <Esc>ggvG$
+"map <c-a> <Esc>ggvG$
 "map <c-1> <Esc>ggvG$x<Esc>:w!<CR>
 
 
