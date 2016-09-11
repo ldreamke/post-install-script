@@ -13,6 +13,7 @@ cp after/ftplugin/* ${VIMFILES_DIR}/after/ftplugin/
 cp -rf autoload/* ${VIMFILES_DIR}/autoload/
 cp doc/* ${VIMFILES_DIR}/doc/
 cp plugin/* ${VIMFILES_DIR}/plugin/
+cp -rf bundle ${VIMFILES_DIR}/
 
 echo "execute the supertab installation"
 vim ${VIMFILES_DIR}/plugin/supertab.vmb -c ":so%" -c ":qa"

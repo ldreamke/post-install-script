@@ -738,3 +738,6 @@ set pastetoggle=<F11>
 
 "set paste
 
+
+"CTRLP. lookuping files
+set runtimepath=/usr/share/vim/vimfiles/bundle/ctrlp.vim
