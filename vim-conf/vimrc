@@ -741,3 +741,8 @@ set pastetoggle=<F11>
 
 "CTRLP. lookuping files
 set runtimepath=/usr/share/vim/vimfiles/bundle/ctrlp.vim
+
+" zh support
+set fencs=utf-8,gbk
+"set fileencoding=gb18030 set fileencodings=utf-8,gb18030,utf-16,big5
+set fileencodings=utf-8,gb18030,utf-16,big5
